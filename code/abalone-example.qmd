@@ -39,13 +39,13 @@ H~A~: **pH predicts abalone growth **
 ## b. Cleaning
 
 ```{r abalone-data-cleaning}
-# 
+# creating ablone clean from original data set 
 abalone_clean <- abalone  
-  # 
+  # cleaning up all collumn names 
   clean_names()  
-  # 
+  # selecting columns of intrest
   select(mean_p_h, change_in_area_mm2_d_1_25)  
-  # 
+  # renaming cloumn names for easier use 
   rename(mean_ph = mean_p_h, 
          change_in_area = change_in_area_mm2_d_1_25)
 ```
