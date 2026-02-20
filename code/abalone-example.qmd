@@ -13,6 +13,7 @@ execute:
 # Set up
 
 ```{r libraries-and-data}
+
 library(tidyverse) # general use
 library(janitor) # cleaning data frames
 library(here) # file/folder organization
@@ -41,11 +42,11 @@ H~A~: **pH predicts abalone growth **
 ```{r abalone-data-cleaning}
 # creating ablone clean from original data set 
 abalone_clean <- abalone  
-  # cleaning up all collumn names 
-  clean_names()  
+  # cleaning up all column names 
+  clean_names()
   # selecting columns of intrest
   select(mean_p_h, change_in_area_mm2_d_1_25)  
-  # renaming cloumn names for easier use 
+  # renaming column names for easier use 
   rename(mean_ph = mean_p_h, 
          change_in_area = change_in_area_mm2_d_1_25)
 ```
@@ -55,20 +56,20 @@ Don't forget to look at your data! Use `View(abalone_clean)` in the _Console_.
 ## c. Exploratory data visualization
 
 ```{r abalone-scatterplot}
-# 
+# creatinf a base layer ggplot call
 ggplot(data = abalone_clean, # 
        aes(x = mean_ph, # 
            y = change_in_area)) 
-  # 
-  geom_point(size = 4,
-             stroke = 1,
+  # data set should be clean x axis should be predictor y axis should be response # first layer point to represent average change in shell surface for each pair of tanks
+  geom_point(size = 4, # 
+             stroke = 1, # get rid of missing value 
              fill = "firebrick4",
              shape = 21)
 ```
 
 Where does the missing value come from?  
 
-**insert response here**  
+**tank B1B when the pH sensor failed**  
 
 Don't forget to turn your warnings off either in the individual code chunk or in the YAML at the top of the file.
 
@@ -101,7 +102,11 @@ summary(abalone_model)
 
 ```
 
-What is the slope estimate (with standard error?)  
+
+Residuals seen homoclastic (constant across values) base of residuals vs fitted and scale- location plots. residuals also seem normally distributed 
+
+
+What is the slope estimate (with standard error?)  We evaluated model assumptions visually. For hoomesticity of residuals we used rediduals vs fitted and scale loaction plots. For normality, qqPlots. Based of the diagnositcs 
 
 **insert your response here**  
 
