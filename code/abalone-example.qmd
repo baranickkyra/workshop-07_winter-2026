@@ -108,7 +108,8 @@ Residuals seen homoclastic (constant across values) base of residuals vs fitted 
 
 What is the slope estimate (with standard error?)  We evaluated model assumptions visually. For hoomesticity of residuals we used rediduals vs fitted and scale loaction plots. For normality, qqPlots. Based of the diagnositcs 
 
-**insert your response here**  
+**2.98 se = 
+= +/- .76*with eash pH the model predicts and increase of  2.98 mm ^2^ in shell surface area per day *  
 
 What is the intercept estimate (with standard error?)  
 
@@ -132,7 +133,7 @@ Look at the column names using `colnames(abalone_preds)` in the Console.
 
 What are the column names?  
 
-**insert your notes here**  
+** The intercept is -18.5 mm^2^ +/_ 6.16 when pH = 0 The model predicts that abalone shell surface changes by 18.5 +/_ 6.16. This isnt biologically realistic it is just something that the mode predicts based on the model as a estimate**  
 
 Look at the actual object (by clicking on it in Environment).  
 
@@ -140,7 +141,7 @@ Look at the class of the object using `class(abalone_preds)` in the Console.
 
 What is this type of object?  
 
-**insert your notes here**  
+****  
 
 View `abalone_preds` like a data frame. 
 
